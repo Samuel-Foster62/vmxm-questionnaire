@@ -35,60 +35,88 @@ components:
       name: label_3
       properties: {role: title, text: Basic information*}
       type: Label
-    - layout_properties: {grid_position: 'HWGPKZ,RNQDTT'}
+    - layout_properties: {grid_position: 'WAVRUB,SWEMOQ'}
       name: label_4
-      properties: {text: '*Name'}
+      properties:
+        spacing:
+          padding: [10, null, 0, null]
+        spacing_below: none
+        text: '*Name'
       type: Label
-    - layout_properties: {grid_position: 'HWGPKZ,WZIKWS'}
+    - layout_properties: {grid_position: 'OHYRXW,UKFHWM'}
       name: txtName
-      properties: {role: outlined}
+      properties: {background: white, role: outlined}
       type: TextBox
-    - layout_properties: {grid_position: 'ZOJCUO,DESTNJ'}
+    - layout_properties: {grid_position: 'HMSQSI,ORMVEF'}
       name: label_5
-      properties: {text: '*Email'}
+      properties:
+        spacing:
+          padding: [10, null, 0, null]
+        spacing_below: none
+        text: '*Email'
       type: Label
-    - layout_properties: {grid_position: 'ZOJCUO,QTFAAG'}
+    - layout_properties: {grid_position: 'NNZJJH,PSTXQS'}
       name: txtEmail
-      properties: {role: outlined}
+      properties: {foreground: wht, role: outlined}
       type: TextBox
-    - layout_properties: {grid_position: 'PUKXKB,UZIXWC'}
+    - layout_properties: {grid_position: 'QIJPDD,YCWBKB'}
       name: label_5_copy
-      properties: {text: Group/ University}
+      properties:
+        spacing:
+          padding: [10, null, 0, null]
+        spacing_below: none
+        text: Group/ University
       type: Label
-    - layout_properties: {grid_position: 'PUKXKB,NHCJRM'}
+    - layout_properties: {grid_position: 'DECPPF,EWGDCS'}
       name: txtAffil
       properties: {role: outlined, text: ''}
       type: TextBox
-    - layout_properties: {grid_position: 'NGWETY,JXGNVN'}
+    - layout_properties: {grid_position: 'JRQUHB,OYCYXK'}
       name: label_5_copy_2
-      properties: {text: BAG Number}
+      properties:
+        spacing:
+          padding: [10, null, 0, null]
+        spacing_below: none
+        text: BAG Number
       type: Label
-    - layout_properties: {grid_position: 'NGWETY,DLCQYO'}
+    - layout_properties: {grid_position: 'XLGYSN,IUOEOX'}
       name: txtBAG
       properties: {role: outlined}
       type: TextBox
-    - layout_properties: {grid_position: 'SNOIRH,EXCZUK'}
+    - layout_properties: {grid_position: 'QDVBNJ,KCRPEJ'}
       name: label_5_copy_6
-      properties: {text: VMXm Contact}
+      properties:
+        spacing:
+          padding: [10, null, 0, null]
+        spacing_below: none
+        text: VMXm Contact
       type: Label
-    - layout_properties: {grid_position: 'SNOIRH,AGPCFS'}
+    - layout_properties: {grid_position: 'IMQCJG,YTBAXL'}
       name: dropContact
       properties:
         items: [First Contact, Gwyndaf Evans, Anna Warren, Jose Trincao, Adam Crawshaw]
       type: DropDown
-    - layout_properties: {grid_position: 'EMGQEF,LYRBKT'}
+    - layout_properties: {grid_position: 'GYCIYP,NDFTED'}
       name: label_5_copy_3
-      properties: {text: '*Protein Name'}
+      properties:
+        spacing:
+          padding: [10, null, 0, null]
+        spacing_below: none
+        text: '*Protein Name'
       type: Label
-    - layout_properties: {grid_position: 'EMGQEF,UVGMGJ'}
+    - layout_properties: {grid_position: 'CRVKWJ,INKNKH'}
       name: txtProtName
       properties: {role: outlined}
       type: TextBox
-    - layout_properties: {grid_position: 'OJWXDG,QHIPND'}
+    - layout_properties: {grid_position: 'REBRHI,SHCLEU'}
       name: label_5_copy_4
-      properties: {text: Construct Sequence}
+      properties:
+        spacing:
+          padding: [10, null, 0, null]
+        spacing_below: none
+        text: Construct Sequence
       type: Label
-    - layout_properties: {grid_position: 'OJWXDG,LPCQPO'}
+    - layout_properties: {grid_position: 'SCKFBN,NTRCPE'}
       name: txtName_copy
       properties: {role: outlined, text: txtSeq}
       type: TextBox
@@ -109,30 +137,30 @@ components:
       type: RadioButton
     layout_properties: {grid_position: 'DGAWXG,KEUELR'}
     name: outlined_card_3
-    properties: {col_widths: '{"GGOALU":20,"OMWFGS":20,"KFTZDM":20,"QHIPND":20,"LPCQPO":40,"LYRBKT":20,"UVGMGJ":40,"EXCZUK":20,"AGPCFS":40,"JXGNVN":20,"DLCQYO":40,"UZIXWC":20,"NHCJRM":40,"DESTNJ":20,"QTFAAG":40,"RNQDTT":20,"WZIKWS":40}', role: outlined-card}
+    properties: {col_widths: '{"GGOALU":20,"OMWFGS":20,"KFTZDM":20,"QHIPND":20}', role: outlined-card}
     type: ColumnPanel
   - components:
     - layout_properties: {grid_position: 'TIZHSP,AOHZKA'}
       name: label_3_copy
       properties: {role: title, text: Crystal information}
       type: Label
-    - layout_properties: {grid_position: 'HWGPKZ,RNQDTT'}
+    - layout_properties: {grid_position: 'CXQVPF,DJBSCS'}
       name: label_4_copy
       properties: {text: Crystallisation Conditions}
       type: Label
-    - layout_properties: {grid_position: 'HWGPKZ,TYWHKM'}
+    - layout_properties: {grid_position: 'LLYDDM,QBEPET'}
       name: txtCrystCond
       properties: {height: 58}
       type: TextArea
-    - layout_properties: {grid_position: 'HWGPKZ,BMSWMZ'}
+    - layout_properties: {grid_position: 'FAVFFN,THPGCM'}
       name: chkLCP
-      properties: {text: LCP}
+      properties: {align: left, text: LCP}
       type: CheckBox
-    - layout_properties: {grid_position: 'FVJSHE,ADIIXZ'}
+    - layout_properties: {grid_position: 'NAHHHS,MLBYIY'}
       name: label_8
       properties: {text: Method of crystallisation}
       type: Label
-    - layout_properties: {grid_position: 'FVJSHE,KKAOSP'}
+    - layout_properties: {grid_position: 'PVKQJO,YJGWKZ'}
       name: txtEmail_copy_copy
       properties: {role: outlined}
       type: TextBox
@@ -140,7 +168,7 @@ components:
       name: label_6
       properties: {text: 'Cryo-protectants are not generally required on VMXm, however if your crystallisation condition contains them, or other viscous buffer components, please indicate here '}
       type: Label
-    - layout_properties: {grid_position: 'ZOJCUO,VPVCLT'}
+    - layout_properties: {grid_position: 'TGLAES,YUTBMC'}
       name: chkCryo
       properties:
         spacing:
@@ -148,98 +176,98 @@ components:
         text: Cryo-protectant/ Viscous buffer components
         tooltip: Cryoprotectants are not required generally on VMXm, however please indicate if you have any, or other viscous buffer components
       type: CheckBox
-    - layout_properties: {grid_position: 'ZOJCUO,QTFAAG'}
+    - layout_properties: {grid_position: 'TGLAES,WPVSAF'}
       name: txtEmail_copy
       properties: {role: outlined}
       type: TextBox
-    - layout_properties: {grid_position: 'GUTQBI,UJGCJK'}
+    - layout_properties: {grid_position: 'MZVLAL,OIBEVL'}
       name: label_5_copy_copy_copy
       properties: {text: Morphology}
       type: Label
-    - layout_properties: {grid_position: 'GUTQBI,BLROPY'}
+    - layout_properties: {grid_position: 'YCTDMQ,KEJOPV'}
       name: dropContact_copy_copy
       properties:
         items: [First Contact, Gwyndaf Evans, Anna Warren, Jose Trincao, Adam Crawshaw]
       type: DropDown
-    - layout_properties: {grid_position: 'PUKXKB,UZIXWC'}
+    - layout_properties: {grid_position: 'YNBZPD,AVXPCH'}
       name: label_5_copy_copy
       properties: {text: Average crystal size}
       type: Label
-    - layout_properties: {grid_position: 'PUKXKB,NHCJRM'}
+    - layout_properties: {grid_position: 'XZCNNY,RKJYOV'}
       name: txtAffil_copy
       properties: {role: outlined, text: ''}
       type: TextBox
-    - layout_properties: {grid_position: 'XJYTDO,MQUTVA'}
+    - layout_properties: {grid_position: 'TDDKRI,XXEBJI'}
       name: label_7
       properties: {text: Estimated crystal density}
       type: Label
-    - layout_properties: {grid_position: 'XJYTDO,UYROMC'}
+    - layout_properties: {grid_position: 'ELIOMX,AJKYUP'}
       name: text_box_1
       properties: {}
       type: TextBox
-    - layout_properties: {grid_position: 'LLJMWI,NPSKOG'}
+    - layout_properties: {grid_position: 'XXLQGE,CIJKUO'}
       name: label_9
       properties: {text: Quantity of sample}
       type: Label
-    - layout_properties: {grid_position: 'LLJMWI,YHGWUF'}
+    - layout_properties: {grid_position: 'NGRDHW,XDMMUX'}
       name: text_box_2
       properties: {}
       type: TextBox
-    - layout_properties: {grid_position: 'NGWETY,JXGNVN'}
+    - layout_properties: {grid_position: 'MEFNNG,DPUQSV'}
       name: label_5_copy_2_copy
       properties: {text: Method to determine size}
       type: Label
-    - layout_properties: {grid_position: 'NGWETY,DLCQYO'}
+    - layout_properties: {grid_position: 'TKUCPJ,VACLHF'}
       name: txtBAG_copy
       properties: {role: outlined}
       type: TextBox
-    - layout_properties: {grid_position: 'SNOIRH,EXCZUK'}
+    - layout_properties: {grid_position: 'WECJHR,JCOPXA'}
       name: label_5_copy_6_copy
       properties: {text: Space Group}
       type: Label
-    - layout_properties: {grid_position: 'SNOIRH,AGPCFS'}
+    - layout_properties: {grid_position: 'NJJEMY,XDAGYN'}
       name: dropContact_copy
       properties:
         items: [First Contact, Gwyndaf Evans, Anna Warren, Jose Trincao, Adam Crawshaw]
       type: DropDown
-    - layout_properties: {grid_position: 'EMGQEF,LYRBKT'}
+    - layout_properties: {grid_position: 'KHARGU,HQPEPY'}
       name: label_5_copy_3_copy
       properties: {text: 'Unit Cell (a, b, c, α, β, γ)'}
       type: Label
-    - layout_properties: {grid_position: 'EMGQEF,UVGMGJ'}
+    - layout_properties: {grid_position: 'RBMBMH,CRZGUH'}
       name: txtProtName_copy
       properties: {role: outlined}
       type: TextBox
-    - layout_properties: {grid_position: 'OJWXDG,QHIPND'}
+    - layout_properties: {grid_position: 'UZYWWY,XNYMRN'}
       name: label_5_copy_4_copy
       properties: {text: Molecules per ASU}
       type: Label
-    - layout_properties: {grid_position: 'OJWXDG,LPCQPO'}
+    - layout_properties: {grid_position: 'LRBLNA,MWTEYC'}
       name: txtName_copy_copy
       properties: {role: outlined, text: txtSeq}
       type: TextBox
     layout_properties: {grid_position: 'OJLHOC,CASRUY'}
     name: outlined_card_3_copy
-    properties: {col_widths: '{"KFTZDM":20,"QHIPND":20,"LPCQPO":40,"LYRBKT":20,"UVGMGJ":40,"EXCZUK":20,"AGPCFS":40,"JXGNVN":20,"DLCQYO":40,"UZIXWC":20,"NHCJRM":40,"QTFAAG":45,"RNQDTT":20,"TYWHKM":40,"UJGCJK":20,"BLROPY":40,"VPVCLT":25,"MQUTVA":20,"UYROMC":40,"ADIIXZ":15,"KKAOSP":45,"BMSWMZ":14}', role: outlined-card}
+    properties: {col_widths: '{"QHIPND":20}', role: outlined-card}
     type: ColumnPanel
   - components:
     - layout_properties: {grid_position: 'TIZHSP,AOHZKA'}
       name: label_3_copy_copy
       properties: {role: title, text: The experiment}
       type: Label
-    - layout_properties: {grid_position: 'HWGPKZ,RNQDTT'}
+    - layout_properties: {grid_position: 'VVOBWI,RRMXRG'}
       name: label_4_copy_copy
       properties: {text: 'Have you conducted any previous data collections or experiments been performed? If so what was observed'}
       type: Label
-    - layout_properties: {grid_position: 'HWGPKZ,QSNSSL'}
+    - layout_properties: {grid_position: 'YLRUQB,HRQVZH'}
       name: text_area_2
       properties: {}
       type: TextArea
-    - layout_properties: {grid_position: 'FVJSHE,ADIIXZ'}
+    - layout_properties: {grid_position: 'USWKRZ,ATDHNG'}
       name: label_8_copy
       properties: {text: 'What would be the aim of the experiment at VMXm? Do you require greater resolution? Is the structure novel?'}
       type: Label
-    - layout_properties: {grid_position: 'FVJSHE,UHQQIX'}
+    - layout_properties: {grid_position: 'PUILNJ,ZSOPAO'}
       name: text_area_1
       properties: {}
       type: TextArea
@@ -265,7 +293,7 @@ components:
       type: CheckBox
     layout_properties: {grid_position: 'BPQWLC,TYCUTG'}
     name: outlined_card_3_copy_copy
-    properties: {col_widths: '{"RNQDTT":20,"VPVCLT":25,"ADIIXZ":15}', role: outlined-card}
+    properties: {col_widths: '{"VPVCLT":25,"ADIIXZ":15}', role: outlined-card}
     type: ColumnPanel
   layout_properties: {slot: default}
   name: outlined_card_2
@@ -282,7 +310,7 @@ components:
     type: Label
   - layout_properties: {grid_position: 'HWGPKZ,EWCIXV'}
     name: file_loader_1
-    properties: {text: PDB}
+    properties: {file_types: '.cif, .pdb', multiple: true, text: PDB}
     type: FileLoader
   - layout_properties: {grid_position: 'HWGPKZ,RFFFDI'}
     name: text_box_3
@@ -292,13 +320,18 @@ components:
     name: label_8_copy_copy
     properties: {text: 'Please upload images of your crystals, with a scale bar if available'}
     type: Label
-  - layout_properties: {grid_position: 'FVJSHE,ITOYPL'}
+  - event_bindings: {change: file_loader_2_change}
+    layout_properties: {grid_position: 'FVJSHE,ITOYPL'}
     name: file_loader_2
-    properties: {}
+    properties: {file_types: image/*, text: Upload Images}
     type: FileLoader
+  - layout_properties: {grid_position: 'FVJSHE,KSSBDA'}
+    name: spacer_1
+    properties: {height: 32}
+    type: Spacer
   layout_properties: {slot: default}
   name: outlined_card_3_copy_copy_copy
-  properties: {col_widths: '{"RNQDTT":20,"ADIIXZ":17,"EWCIXV":20,"RFFFDI":20,"ITOYPL":22}', role: outlined-card}
+  properties: {col_widths: '{"RNQDTT":20,"ADIIXZ":20,"EWCIXV":20,"RFFFDI":20,"ITOYPL":20,"KSSBDA":20}', role: outlined-card}
   type: ColumnPanel
 - layout_properties: {slot: default}
   name: outlined_button_1

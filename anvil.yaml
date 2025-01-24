@@ -1,9 +1,9 @@
 allow_embedding: false
 dependencies: []
 metadata: {description: 'Questionnaire regarding user crystal samples prior to visiting VMXm at Diamond Light Source, UK', logo_img: 'asset:VMXm_Endstation_square.jpg', title: VMXm_Questionnaire}
-name: VMXm Prospective User Questionnaire
+name: VMXm Questionnaire
 native_deps: null
-package_name: VMXm_Prospective_User_Questionnaire
+package_name: VMXm_Questionnaire
 renamed: true
 runtime_options:
   client_version: '3'
