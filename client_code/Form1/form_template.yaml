@@ -3,11 +3,7 @@ components:
   name: navbar_links
   properties: {}
   type: FlowPanel
-- components:
-  - layout_properties: {grid_position: 'VAYVAV,NHNFAY'}
-    name: outlined_card_1
-    properties: {role: outlined-card}
-    type: ColumnPanel
+- components: []
   layout_properties: {slot: title}
   name: content_panel
   properties: {col_widths: '{}'}
@@ -15,12 +11,299 @@ components:
 - components:
   - layout_properties: {grid_position: 'LNKRFG,BLDRAN'}
     name: label_1
-    properties: {role: headline, text: VMXm questionnaire}
+    properties: {role: headline, text: VMXm Questionnaire}
     type: Label
+  - layout_properties: {grid_position: 'VVCNER,EMOLCW'}
+    name: rich_text_1
+    properties:
+      content: |-
+        Please fill in this form with as much information as you can and click "submit" at the bottom of the page. Tooltips are available to help with any section. If you are unable to complete a question then please leave it blank. There is a general comments box at the bottom if there is anything in particular you'd like to inform us about. If you have any questions regarding this form, or prospective experiments please contact us at <a href="mailto:vmxm@diamond.ac.uk". >vmxm@diamond.ac.uk. </a>
+
+        The information you provide in the form will be available to the VMXm beamline team at Diamond to help with planning your experiment. Any personal data submitted in this form will be processed in accordance with Diamond’s Privacy Notice available at: <a href="https://www.diamond.ac.uk/Home/Legal-and-Compliance/Privacy-Notice-.html/">https://www.diamond.ac.uk/Home/Legal-and-Compliance/Privacy-Notice-.html
+      format: restricted_html
+      spacing:
+        padding: [null, 5, null, 5]
+      spacing_above: medium
+      spacing_below: medium
+    type: RichText
+  - layout_properties: {grid_position: 'RWIAGK,HFMGQH'}
+    name: label_2
+    properties: {icon: 'fa:info', role: body, spacing_below: large, text: '* indicates required information'}
+    type: Label
+  - components:
+    - layout_properties: {grid_position: 'TIZHSP,AOHZKA'}
+      name: label_3
+      properties: {role: title, text: Basic information*}
+      type: Label
+    - layout_properties: {grid_position: 'HWGPKZ,RNQDTT'}
+      name: label_4
+      properties: {text: '*Name'}
+      type: Label
+    - layout_properties: {grid_position: 'HWGPKZ,WZIKWS'}
+      name: txtName
+      properties: {role: outlined}
+      type: TextBox
+    - layout_properties: {grid_position: 'ZOJCUO,DESTNJ'}
+      name: label_5
+      properties: {text: '*Email'}
+      type: Label
+    - layout_properties: {grid_position: 'ZOJCUO,QTFAAG'}
+      name: txtEmail
+      properties: {role: outlined}
+      type: TextBox
+    - layout_properties: {grid_position: 'PUKXKB,UZIXWC'}
+      name: label_5_copy
+      properties: {text: Group/ University}
+      type: Label
+    - layout_properties: {grid_position: 'PUKXKB,NHCJRM'}
+      name: txtAffil
+      properties: {role: outlined, text: ''}
+      type: TextBox
+    - layout_properties: {grid_position: 'NGWETY,JXGNVN'}
+      name: label_5_copy_2
+      properties: {text: BAG Number}
+      type: Label
+    - layout_properties: {grid_position: 'NGWETY,DLCQYO'}
+      name: txtBAG
+      properties: {role: outlined}
+      type: TextBox
+    - layout_properties: {grid_position: 'SNOIRH,EXCZUK'}
+      name: label_5_copy_6
+      properties: {text: VMXm Contact}
+      type: Label
+    - layout_properties: {grid_position: 'SNOIRH,AGPCFS'}
+      name: dropContact
+      properties:
+        items: [First Contact, Gwyndaf Evans, Anna Warren, Jose Trincao, Adam Crawshaw]
+      type: DropDown
+    - layout_properties: {grid_position: 'EMGQEF,LYRBKT'}
+      name: label_5_copy_3
+      properties: {text: '*Protein Name'}
+      type: Label
+    - layout_properties: {grid_position: 'EMGQEF,UVGMGJ'}
+      name: txtProtName
+      properties: {role: outlined}
+      type: TextBox
+    - layout_properties: {grid_position: 'OJWXDG,QHIPND'}
+      name: label_5_copy_4
+      properties: {text: Construct Sequence}
+      type: Label
+    - layout_properties: {grid_position: 'OJWXDG,LPCQPO'}
+      name: txtName_copy
+      properties: {role: outlined, text: txtSeq}
+      type: TextBox
+    - layout_properties: {grid_position: 'VLSGRQ,GGOALU'}
+      name: label_5_copy_5
+      properties: {text: 'ERA submitted?'}
+      type: Label
+    - data_bindings: []
+      event_bindings: {clicked: radERAYes_clicked}
+      layout_properties: {grid_position: 'VLSGRQ,OMWFGS'}
+      name: radERAYes
+      properties: {group_name: radGrpERA, text: 'Yes', value: 'True'}
+      type: RadioButton
+    - event_bindings: {clicked: radERANo_clicked}
+      layout_properties: {grid_position: 'VLSGRQ,KFTZDM'}
+      name: radERANo
+      properties: {group_name: radGrpERA, text: 'No', value: 'False'}
+      type: RadioButton
+    layout_properties: {grid_position: 'DGAWXG,KEUELR'}
+    name: outlined_card_3
+    properties: {col_widths: '{"GGOALU":20,"OMWFGS":20,"KFTZDM":20,"QHIPND":20,"LPCQPO":40,"LYRBKT":20,"UVGMGJ":40,"EXCZUK":20,"AGPCFS":40,"JXGNVN":20,"DLCQYO":40,"UZIXWC":20,"NHCJRM":40,"DESTNJ":20,"QTFAAG":40,"RNQDTT":20,"WZIKWS":40}', role: outlined-card}
+    type: ColumnPanel
+  - components:
+    - layout_properties: {grid_position: 'TIZHSP,AOHZKA'}
+      name: label_3_copy
+      properties: {role: title, text: Crystal information}
+      type: Label
+    - layout_properties: {grid_position: 'HWGPKZ,RNQDTT'}
+      name: label_4_copy
+      properties: {text: Crystallisation Conditions}
+      type: Label
+    - layout_properties: {grid_position: 'HWGPKZ,TYWHKM'}
+      name: txtCrystCond
+      properties: {height: 58}
+      type: TextArea
+    - layout_properties: {grid_position: 'HWGPKZ,BMSWMZ'}
+      name: chkLCP
+      properties: {text: LCP}
+      type: CheckBox
+    - layout_properties: {grid_position: 'FVJSHE,ADIIXZ'}
+      name: label_8
+      properties: {text: Method of crystallisation}
+      type: Label
+    - layout_properties: {grid_position: 'FVJSHE,KKAOSP'}
+      name: txtEmail_copy_copy
+      properties: {role: outlined}
+      type: TextBox
+    - layout_properties: {grid_position: 'ELKWMM,KLTFDA'}
+      name: label_6
+      properties: {text: 'Cryo-protectants are not generally required on VMXm, however if your crystallisation condition contains them, or other viscous buffer components, please indicate here '}
+      type: Label
+    - layout_properties: {grid_position: 'ZOJCUO,VPVCLT'}
+      name: chkCryo
+      properties:
+        spacing:
+          padding: [null, 0, null, 23]
+        text: Cryo-protectant/ Viscous buffer components
+        tooltip: Cryoprotectants are not required generally on VMXm, however please indicate if you have any, or other viscous buffer components
+      type: CheckBox
+    - layout_properties: {grid_position: 'ZOJCUO,QTFAAG'}
+      name: txtEmail_copy
+      properties: {role: outlined}
+      type: TextBox
+    - layout_properties: {grid_position: 'GUTQBI,UJGCJK'}
+      name: label_5_copy_copy_copy
+      properties: {text: Morphology}
+      type: Label
+    - layout_properties: {grid_position: 'GUTQBI,BLROPY'}
+      name: dropContact_copy_copy
+      properties:
+        items: [First Contact, Gwyndaf Evans, Anna Warren, Jose Trincao, Adam Crawshaw]
+      type: DropDown
+    - layout_properties: {grid_position: 'PUKXKB,UZIXWC'}
+      name: label_5_copy_copy
+      properties: {text: Average crystal size}
+      type: Label
+    - layout_properties: {grid_position: 'PUKXKB,NHCJRM'}
+      name: txtAffil_copy
+      properties: {role: outlined, text: ''}
+      type: TextBox
+    - layout_properties: {grid_position: 'XJYTDO,MQUTVA'}
+      name: label_7
+      properties: {text: Estimated crystal density}
+      type: Label
+    - layout_properties: {grid_position: 'XJYTDO,UYROMC'}
+      name: text_box_1
+      properties: {}
+      type: TextBox
+    - layout_properties: {grid_position: 'LLJMWI,NPSKOG'}
+      name: label_9
+      properties: {text: Quantity of sample}
+      type: Label
+    - layout_properties: {grid_position: 'LLJMWI,YHGWUF'}
+      name: text_box_2
+      properties: {}
+      type: TextBox
+    - layout_properties: {grid_position: 'NGWETY,JXGNVN'}
+      name: label_5_copy_2_copy
+      properties: {text: Method to determine size}
+      type: Label
+    - layout_properties: {grid_position: 'NGWETY,DLCQYO'}
+      name: txtBAG_copy
+      properties: {role: outlined}
+      type: TextBox
+    - layout_properties: {grid_position: 'SNOIRH,EXCZUK'}
+      name: label_5_copy_6_copy
+      properties: {text: Space Group}
+      type: Label
+    - layout_properties: {grid_position: 'SNOIRH,AGPCFS'}
+      name: dropContact_copy
+      properties:
+        items: [First Contact, Gwyndaf Evans, Anna Warren, Jose Trincao, Adam Crawshaw]
+      type: DropDown
+    - layout_properties: {grid_position: 'EMGQEF,LYRBKT'}
+      name: label_5_copy_3_copy
+      properties: {text: 'Unit Cell (a, b, c, α, β, γ)'}
+      type: Label
+    - layout_properties: {grid_position: 'EMGQEF,UVGMGJ'}
+      name: txtProtName_copy
+      properties: {role: outlined}
+      type: TextBox
+    - layout_properties: {grid_position: 'OJWXDG,QHIPND'}
+      name: label_5_copy_4_copy
+      properties: {text: Molecules per ASU}
+      type: Label
+    - layout_properties: {grid_position: 'OJWXDG,LPCQPO'}
+      name: txtName_copy_copy
+      properties: {role: outlined, text: txtSeq}
+      type: TextBox
+    layout_properties: {grid_position: 'OJLHOC,CASRUY'}
+    name: outlined_card_3_copy
+    properties: {col_widths: '{"KFTZDM":20,"QHIPND":20,"LPCQPO":40,"LYRBKT":20,"UVGMGJ":40,"EXCZUK":20,"AGPCFS":40,"JXGNVN":20,"DLCQYO":40,"UZIXWC":20,"NHCJRM":40,"QTFAAG":45,"RNQDTT":20,"TYWHKM":40,"UJGCJK":20,"BLROPY":40,"VPVCLT":25,"MQUTVA":20,"UYROMC":40,"ADIIXZ":15,"KKAOSP":45,"BMSWMZ":14}', role: outlined-card}
+    type: ColumnPanel
+  - components:
+    - layout_properties: {grid_position: 'TIZHSP,AOHZKA'}
+      name: label_3_copy_copy
+      properties: {role: title, text: The experiment}
+      type: Label
+    - layout_properties: {grid_position: 'HWGPKZ,RNQDTT'}
+      name: label_4_copy_copy
+      properties: {text: 'Have you conducted any previous data collections or experiments been performed? If so what was observed'}
+      type: Label
+    - layout_properties: {grid_position: 'HWGPKZ,QSNSSL'}
+      name: text_area_2
+      properties: {}
+      type: TextArea
+    - layout_properties: {grid_position: 'FVJSHE,ADIIXZ'}
+      name: label_8_copy
+      properties: {text: 'What would be the aim of the experiment at VMXm? Do you require greater resolution? Is the structure novel?'}
+      type: Label
+    - layout_properties: {grid_position: 'FVJSHE,UHQQIX'}
+      name: text_area_1
+      properties: {}
+      type: TextArea
+    - layout_properties: {grid_position: 'ZOJCUO,VPVCLT'}
+      name: chkCryo_copy
+      properties:
+        align: center
+        bold: true
+        spacing:
+          padding: [null, 0, null, 23]
+        text: Is there a prior structure?
+        tooltip: Cryoprotectants are not required generally on VMXm, however please indicate if you have any, or other viscous buffer components
+      type: CheckBox
+    - layout_properties: {grid_position: 'WDGREU,OTWRYR'}
+      name: chkCryo_copy_copy
+      properties:
+        align: center
+        bold: true
+        spacing:
+          padding: [null, 0, null, 23]
+        text: Is there a molecular replacement model?
+        tooltip: Cryoprotectants are not required generally on VMXm, however please indicate if you have any, or other viscous buffer components
+      type: CheckBox
+    layout_properties: {grid_position: 'BPQWLC,TYCUTG'}
+    name: outlined_card_3_copy_copy
+    properties: {col_widths: '{"RNQDTT":20,"VPVCLT":25,"ADIIXZ":15}', role: outlined-card}
+    type: ColumnPanel
   layout_properties: {slot: default}
   name: outlined_card_2
   properties: {role: outlined-card}
   type: ColumnPanel
+- components:
+  - layout_properties: {grid_position: 'TIZHSP,AOHZKA'}
+    name: label_3_copy_copy_copy
+    properties: {role: title, text: File uploader}
+    type: Label
+  - layout_properties: {grid_position: 'HWGPKZ,RNQDTT'}
+    name: label_4_copy_copy_copy
+    properties: {text: 'Please upload a PDB/ mmCIF file if available, alternatively provide a PDB code'}
+    type: Label
+  - layout_properties: {grid_position: 'HWGPKZ,EWCIXV'}
+    name: file_loader_1
+    properties: {text: PDB}
+    type: FileLoader
+  - layout_properties: {grid_position: 'HWGPKZ,RFFFDI'}
+    name: text_box_3
+    properties: {}
+    type: TextBox
+  - layout_properties: {grid_position: 'FVJSHE,ADIIXZ'}
+    name: label_8_copy_copy
+    properties: {text: 'Please upload images of your crystals, with a scale bar if available'}
+    type: Label
+  - layout_properties: {grid_position: 'FVJSHE,ITOYPL'}
+    name: file_loader_2
+    properties: {}
+    type: FileLoader
+  layout_properties: {slot: default}
+  name: outlined_card_3_copy_copy_copy
+  properties: {col_widths: '{"RNQDTT":20,"ADIIXZ":17,"EWCIXV":20,"RFFFDI":20,"ITOYPL":22}', role: outlined-card}
+  type: ColumnPanel
+- layout_properties: {slot: default}
+  name: outlined_button_1
+  properties: {background: '', role: outlined-button, text: Submit}
+  type: Button
 container:
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate
