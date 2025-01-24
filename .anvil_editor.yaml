@@ -1,9 +1,11 @@
 unique_ids:
   assets:
+    VMXm_Endstation_square.jpg: '1737723424541653176092813.2839'
     standard-page.html: NEHI2URPKCL7HBFCDZYPVYTMTFLMMTLV
     theme.css: LYGX44FSWPD667PZYDDS2QD2XLJXACFP
   forms:
     Form1: 4JND5ENXHPWTUWDL4VETUUVJ3BRLHHBF
   modules: {}
   scripts: {}
-  server_modules: {}
+  server_modules:
+    ServerModule1: '1737723438978592638073504.7836'
