@@ -1,6 +1,22 @@
 import anvil.email
 import anvil.server
+import anvil.pdf
+import gemmi
+import re
 
+@anvil.server.callable
+def get_spacegroups():
+  spacegroups = [gemmi.SpaceGroup(i).hm for i in range(1, 231) if gemmi.SpaceGroup(i).is_sohncke()]
+  return spacegroups
+
+@anvil.server.callable
+def check_email(email):
+  pattern = r"^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$" 
+  if re.fullmatch(pattern, email):
+    return True
+  else:
+    return False
+    
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
 #
@@ -26,3 +42,12 @@ def send_feedback(name, email, feedback):
   Feedback:
   {feedback}
   """)
+
+@anvil.server.callable
+def create_pdf(name, email, affil, bag, contact, prot, seq, era, crystCond, 
+               lcp, crystMethod, cryo, morph, size, density, number, sizing, sg, cell,
+               molASU, exptPrior, exptAim, priorStruc, priorMR, pdbcode):
+  pdf = anvil.pdf.render_form('PDF', name, email, affil, bag, contact, prot, seq, era, crystCond, 
+               lcp, crystMethod, cryo, morph, size, density, number, sizing, sg, cell,
+               molASU, exptPrior, exptAim, priorStruc, priorMR, pdbcode)
+  return pdf

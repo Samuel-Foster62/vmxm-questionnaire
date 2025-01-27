@@ -917,7 +917,8 @@ textarea.anvil-component.anvil-role-outlined-error, input.anvil-component.anvil-
 textarea.anvil-component.anvil-role-input-error, input.anvil-component.anvil-role-input-error, 
 .anvil-component.anvil-role-input-error select, .anvil-datepicker.anvil-role-input-error input {
   color: %color:Error%;
-  border-color: %color:Error%; 
+  border-color: %color:Error%;
+  box-shadow: 0 0 10px red;
 }
 
 /*TODO: figure out what this is used for*/
@@ -1026,7 +1027,6 @@ input[disabled] ~ span {
   border-bottom: 0;
   border-right: 0;
 }
-
 
 /*Plots*/
 
