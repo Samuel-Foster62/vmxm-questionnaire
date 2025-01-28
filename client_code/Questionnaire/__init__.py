@@ -14,7 +14,7 @@ class Questionnaire(QuestionnaireTemplate):
     spacegroups = anvil.server.call('get_spacegroups')
     self.dropSpaceGroup.items = [sg for sg in spacegroups]
     email = None
-    
+    images = []
     # Any code you write here will run before the form opens.
 
   ##below not needed in final implementation but uswd for debugging
@@ -84,7 +84,7 @@ class Questionnaire(QuestionnaireTemplate):
       'priorStruc': self.chkPriorStruct.checked,
       'priorMR': self.chkMR.checked,
       'pdbcode': self.txtPDB.text,
-      
+      'images': self.images
     }
   def txtEmail_lost_focus(self, **event_args):
     """This method is called when the TextBox loses focus"""
@@ -123,3 +123,9 @@ class Questionnaire(QuestionnaireTemplate):
         self.selected_file = file
         alert("File selected: " + file.name)
       pass
+
+  def file_loader_2_change(self, file, **event_args):
+    """This method is called when a new file is loaded into this FileLoader"""
+    fn = file.name
+    images.append(fn, file)
+    pass

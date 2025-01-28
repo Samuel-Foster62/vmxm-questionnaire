@@ -1,0 +1,11 @@
+components:
+- layout_properties: {grid_position: 'NIEWKZ,SPGRXQ'}
+  name: imgArea
+  properties: {}
+  type: Image
+- layout_properties: {grid_position: 'PZUXIA,BJVMFH'}
+  name: lblImgName
+  properties: {}
+  type: Label
+container: {type: ColumnPanel}
+is_package: true

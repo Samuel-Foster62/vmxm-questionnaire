@@ -19,8 +19,8 @@ def check_email(email):
 @anvil.server.callable
 def create_pdf(name, email, affil, bag, contact, prot, seq, era, crystCond, 
                lcp, crystMethod, cryo, morph, size, density, number, sizing, sg, cell,
-               molASU, exptPrior, exptAim, priorStruc, priorMR, pdbcode):
+               molASU, exptPrior, exptAim, priorStruc, priorMR, pdbcode, images):
   pdf = anvil.pdf.render_form('PDF', name, email, affil, bag, contact, prot, seq, era, crystCond, 
                lcp, crystMethod, cryo, morph, size, density, number, sizing, sg, cell,
-               molASU, exptPrior, exptAim, priorStruc, priorMR, pdbcode)
+               molASU, exptPrior, exptAim, priorStruc, priorMR, pdbcode, images)
   return pdf

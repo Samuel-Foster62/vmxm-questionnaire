@@ -6,7 +6,7 @@ import anvil.server
 class PDF(PDFTemplate):
   def __init__(self, name, email, affil, bag, contact, prot, seq, era, crystCond, 
                lcp, crystMethod, cryo, morph, size, density, number, sizing, sg, cell,
-               molASU, exptPrior, exptAim, priorStruc, priorMR, pdbcode, **properties):
+               molASU, exptPrior, exptAim, priorStruc, priorMR, pdbcode, images, **properties):
     # Set Form properties and Data Bindings.
       self.init_components(**properties)
       self.txtName.text = name
@@ -37,5 +37,6 @@ class PDF(PDFTemplate):
       self.chkPriorStruct.checked = priorStruc
       self.chkMR.checked = priorMR
       self.txtPDB.text = pdbcode
+      self.repeating_panel_1.items = images
 
     # Any code you write here will run before the form opens.
