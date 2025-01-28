@@ -29,7 +29,7 @@ class PDF(PDFTemplate):
       self.txtCrystQuant.text = number
       self.txtCrystDensity.text = density
       self.txtSizing.text = sizing
-      self.dropSpaceGroup.selected_value = sg
+      self.txtSpaceGroup.text = sg
       self.txtUnitCell.text = cell
       self.txtMolperASU.text =molASU
       self.taPrior.text = exptPrior

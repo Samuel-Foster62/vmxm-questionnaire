@@ -213,12 +213,10 @@ components:
       name: label_5_copy_6_copy
       properties: {text: Space Group}
       type: Label
-    - layout_properties: {grid_position: 'NJJEMY,XDAGYN'}
-      name: dropSpaceGroup
-      properties:
-        background: rgba(3, 31, 35, 0.12)
-        items: []
-      type: DropDown
+    - layout_properties: {grid_position: 'GNFCDX,WCDVOV'}
+      name: txtSpaceGroup
+      properties: {}
+      type: TextBox
     - layout_properties: {grid_position: 'KHARGU,HQPEPY'}
       name: label_5_copy_3_copy
       properties: {text: 'Unit Cell (a, b, c, α, β, γ)'}
@@ -237,7 +235,7 @@ components:
       type: TextBox
     layout_properties: {grid_position: 'OJLHOC,CASRUY'}
     name: outlined_card_3_copy
-    properties: {col_widths: '{"QHIPND":20}', role: outlined-card}
+    properties: {col_widths: '{}', role: outlined-card}
     type: ColumnPanel
   - components:
     - layout_properties: {grid_position: 'TIZHSP,AOHZKA'}

@@ -330,7 +330,7 @@ components:
   - event_bindings: {change: file_loader_2_change}
     layout_properties: {grid_position: 'FVJSHE,ITOYPL'}
     name: flImages
-    properties: {file_types: image/*, text: Upload Images}
+    properties: {file_types: image/*, multiple: true, text: Upload Images}
     type: FileLoader
   - layout_properties: {grid_position: 'FVJSHE,KSSBDA'}
     name: spacer_1
