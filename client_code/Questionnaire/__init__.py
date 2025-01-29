@@ -23,7 +23,7 @@ class Questionnaire(QuestionnaireTemplate):
 
   def btnSubmit_click(self, **event_args):
     """This method is called when the button is clicked"""
-    #anvil.server.call("clean up”)
+    anvil.server.call('cleanUp')
     Essential = [self.txtName, self.txtEmail, self.txtProtName]
 
     print(f"Essential list: {Essential}")
@@ -38,9 +38,9 @@ class Questionnaire(QuestionnaireTemplate):
      self.UserData()
      if self.selected_file:
         anvil.server.call('uploadPDB', self.selected_file)
-     #anvil.server.call("recieveData", self.data)
-     pdf = anvil.server.call('create_pdf', **self.data)
-     anvil.media.download(pdf)
+     anvil.server.call("recieveData", **self.data)
+     #pdf = anvil.server.call('create_pdf', **self.data)
+     #anvil.media.download(pdf)
       ##now want to add images to a container below pdf
       ##and parse pdb/ cif file ready for emailing
      alert("Sent responses to VMXm team! Please check your emails for a copy")
