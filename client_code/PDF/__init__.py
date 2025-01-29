@@ -4,8 +4,8 @@ import anvil.server
 
 
 class PDF(PDFTemplate):
-  def __init__(self, name, email, affil, bag, contact, prot, seq, era, crystCond, 
-               lcp, crystMethod, cryo, morph, size, density, number, sizing, sg, cell,
+  def __init__(self, name, email, affil, bag, contact, prot, crystCond, 
+               crystMethod, cryo, morph, size, number, sizing, sg, cell,
                molASU, exptPrior, exptAim, priorStruc, priorMR, pdbcode, images, **properties):
     # Set Form properties and Data Bindings.
       self.init_components(**properties)
@@ -15,19 +15,12 @@ class PDF(PDFTemplate):
       self.txtBAG.text = bag
       self.dropContact.selected_value = contact
       self.txtProtName.text = prot
-      self.txtSeq.text = seq
-      if era:
-        self.radERAYes.selected = True
-      else:
-        self.radERANo.selected = True
       self.txtCrystCond.text = crystCond
-      self.chkLCP.checked = lcp
       self.txtCrystalisationMethod.text = crystMethod
       self.txtCryoBuff.text = cryo
       self.dropMorphology.selected_value =morph
       self.txtCrystSize.text = size
       self.txtCrystQuant.text = number
-      self.txtCrystDensity.text = density
       self.txtSizing.text = sizing
       self.txtSpaceGroup.text = sg
       self.txtUnitCell.text = cell
