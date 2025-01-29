@@ -10,8 +10,28 @@ class Questionnaire(QuestionnaireTemplate):
     self.txtName.text = ""
     self.txtEmail.text = ""
     self.txtProtName.text = ""
-    
+    self.txtAffil.text = ""
+    self.txtBAG.text = ""
+    self.txtCrystCond.text = ""
+    self.txtCrystalisationMethod.text = ""
+    self.txtCryoBuff.text = ""
+    self.dropMorphology.placeholder = ""
+    self.txtCrystSize.text = ""
+    self.txtCrystQuant.text = ""
+    self.txtSizing.text = ""
+    self.dropSpaceGroup.placeholder = ""
+    self.txtUnitCell.text = ""
+    self.txtMolperASU.text = ""
+    self.taPrior.text = ""
+    self.taAim.text = ""
+    self.chkPriorStruct.checked = None
+    self.chkMR.checked = None
+    self.txtPDB.text = ""
+    self.flImages.clear()
+    self.flPDB.clear()
+        
     spacegroups = anvil.server.call('get_spacegroups')
+    spacegroups.insert(0, "Unknown")
     self.dropSpaceGroup.items = [sg for sg in spacegroups]
     self.email = None
     self.images = []
@@ -44,9 +64,14 @@ class Questionnaire(QuestionnaireTemplate):
       ##now want to add images to a container below pdf
       ##and parse pdb/ cif file ready for emailing
      alert("Sent responses to VMXm team! Please check your emails for a copy")
+     self.__init__()
     pass
     
   def UserData(self):
+    if not self.selected_file :
+      pdbfile = None
+    else:
+      pdbfile = self.selected_file.name
     self.data = {
       'name': self.txtName.text,
       'email': self.txtEmail.text,
@@ -69,6 +94,7 @@ class Questionnaire(QuestionnaireTemplate):
       'priorStruc': self.chkPriorStruct.checked,
       'priorMR': self.chkMR.checked,
       'pdbcode': self.txtPDB.text,
+      'pdbfile': pdbfile,
       'images': self.images
 
     }

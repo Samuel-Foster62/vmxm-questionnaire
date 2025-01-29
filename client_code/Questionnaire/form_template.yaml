@@ -1,13 +1,4 @@
 components:
-- layout_properties: {slot: nav-right}
-  name: navbar_links
-  properties: {}
-  type: FlowPanel
-- components: []
-  layout_properties: {slot: title}
-  name: content_panel
-  properties: {col_widths: '{}'}
-  type: ColumnPanel
 - components:
   - layout_properties: {grid_position: 'LNKRFG,BLDRAN'}
     name: label_1
@@ -46,7 +37,7 @@ components:
     - event_bindings: {lost_focus: txtName_lost_focus}
       layout_properties: {grid_position: 'OHYRXW,UKFHWM'}
       name: txtName
-      properties: {background: 'rgba(3, 31, 35, 0.12)', role: outlined}
+      properties: {background: 'rgba(3, 31, 35, 0.12)', role: outlined, tooltip: 'Your name, or the name of the project contact if filling in form on behalf of someone else'}
       type: TextBox
     - layout_properties: {grid_position: 'HMSQSI,ORMVEF'}
       name: label_5
@@ -59,7 +50,7 @@ components:
     - event_bindings: {lost_focus: txtEmail_lost_focus, pressed_enter: txtEmail_pressed_enter}
       layout_properties: {grid_position: 'NNZJJH,PSTXQS'}
       name: txtEmail
-      properties: {background: 'rgba(3, 31, 35, 0.12)', foreground: wht, role: outlined, type: email}
+      properties: {background: 'rgba(3, 31, 35, 0.12)', foreground: wht, role: outlined, tooltip: 'eg., name@institution.domain', type: email}
       type: TextBox
     - layout_properties: {grid_position: 'QIJPDD,YCWBKB'}
       name: label_5_copy
@@ -71,7 +62,7 @@ components:
       type: Label
     - layout_properties: {grid_position: 'DECPPF,EWGDCS'}
       name: txtAffil
-      properties: {background: 'rgba(3, 31, 35, 0.12)', role: outlined, text: ''}
+      properties: {background: 'rgba(3, 31, 35, 0.12)', role: outlined, text: '', tooltip: 'eg., Moody Lab, University of Leicester'}
       type: TextBox
     - layout_properties: {grid_position: 'JRQUHB,OYCYXK'}
       name: label_5_copy_2
@@ -83,7 +74,7 @@ components:
       type: Label
     - layout_properties: {grid_position: 'XLGYSN,IUOEOX'}
       name: txtBAG
-      properties: {background: 'rgba(3, 31, 35, 0.12)', role: outlined}
+      properties: {background: 'rgba(3, 31, 35, 0.12)', role: outlined, tooltip: 'eg., mx12345'}
       type: TextBox
     - layout_properties: {grid_position: 'QDVBNJ,KCRPEJ'}
       name: label_5_copy_6
@@ -98,6 +89,7 @@ components:
       properties:
         background: rgba(3, 31, 35, 0.12)
         items: [First Contact, Gwyndaf Evans, Anna Warren, Jose Trincao, Adam Crawshaw, Samuel Foster]
+        tooltip: 'select ''first contact'' if unsure '
       type: DropDown
     - layout_properties: {grid_position: 'GYCIYP,NDFTED'}
       name: label_5_copy_3
@@ -110,7 +102,7 @@ components:
     - event_bindings: {lost_focus: txtProtName_lost_focus}
       layout_properties: {grid_position: 'CRVKWJ,INKNKH'}
       name: txtProtName
-      properties: {background: 'rgba(3, 31, 35, 0.12)', role: outlined}
+      properties: {background: 'rgba(3, 31, 35, 0.12)', role: outlined, tooltip: 'Identifier you use for your protein, can be full name or acronym'}
       type: TextBox
     layout_properties: {grid_position: 'DGAWXG,KEUELR'}
     name: outlined_card_3
@@ -127,7 +119,7 @@ components:
       type: Label
     - layout_properties: {grid_position: 'LLYDDM,QBEPET'}
       name: txtCrystCond
-      properties: {background: 'rgba(3, 31, 35, 0.12)', height: 58}
+      properties: {background: 'rgba(3, 31, 35, 0.12)', height: 58, tooltip: 'e.g., 50mM NaH2PO4 pH 10.5, 10mM EDTA. Components is fine without concentrations'}
       type: TextArea
     - layout_properties: {grid_position: 'NAHHHS,MLBYIY'}
       name: label_8
@@ -135,7 +127,7 @@ components:
       type: Label
     - layout_properties: {grid_position: 'PVKQJO,YJGWKZ'}
       name: txtCrystalisationMethod
-      properties: {background: 'rgba(3, 31, 35, 0.12)', role: outlined}
+      properties: {background: 'rgba(3, 31, 35, 0.12)', role: outlined, tooltip: 'e.g., sitting drop vapour diffusion, dialysis, batch, LCP...'}
       type: TextBox
     - layout_properties: {grid_position: 'ELKWMM,KLTFDA'}
       name: label_6
@@ -162,6 +154,7 @@ components:
       name: dropMorphology
       properties:
         items: [Cube, Rod, Plate, Needle, 'Pyramidal ', Bi-pyramidal, Sphere, Other]
+        tooltip: Select the closest morphology to your crystals, if you select other, please specify
       type: DropDown
     - layout_properties: {grid_position: 'YNBZPD,AVXPCH'}
       name: label_5_copy_copy
@@ -169,7 +162,7 @@ components:
       type: Label
     - layout_properties: {grid_position: 'XZCNNY,RKJYOV'}
       name: txtCrystSize
-      properties: {background: 'rgba(3, 31, 35, 0.12)', role: outlined, text: '', tooltip: ''}
+      properties: {background: 'rgba(3, 31, 35, 0.12)', role: outlined, text: '', tooltip: Please indicate the approximate smallest dimension of your crystals}
       type: TextBox
     - layout_properties: {grid_position: 'XXLQGE,CIJKUO'}
       name: label_9
@@ -177,7 +170,7 @@ components:
       type: Label
     - layout_properties: {grid_position: 'NGRDHW,XDMMUX'}
       name: txtCrystQuant
-      properties: {background: 'rgba(3, 31, 35, 0.12)'}
+      properties: {background: 'rgba(3, 31, 35, 0.12)', tooltip: 'Specify the quantity of sample you will be bringing to us, a 96 well plate would be 96 x 1uL for example'}
       type: TextBox
     - layout_properties: {grid_position: 'MEFNNG,DPUQSV'}
       name: label_5_copy_2_copy
@@ -185,7 +178,7 @@ components:
       type: Label
     - layout_properties: {grid_position: 'TKUCPJ,VACLHF'}
       name: txtSizing
-      properties: {background: 'rgba(3, 31, 35, 0.12)', role: outlined}
+      properties: {background: 'rgba(3, 31, 35, 0.12)', role: outlined, tooltip: Please indicate how you estimated your crystal size}
       type: TextBox
     - layout_properties: {grid_position: 'WECJHR,JCOPXA'}
       name: label_5_copy_6_copy
@@ -196,6 +189,7 @@ components:
       properties:
         background: rgba(3, 31, 35, 0.12)
         items: []
+        tooltip: Leave as "unknown" if unsure or you have a small molecule
       type: DropDown
     - layout_properties: {grid_position: 'KHARGU,HQPEPY'}
       name: label_5_copy_3_copy
@@ -211,7 +205,7 @@ components:
       type: Label
     - layout_properties: {grid_position: 'LRBLNA,MWTEYC'}
       name: txtMolperASU
-      properties: {background: 'rgba(3, 31, 35, 0.12)', role: outlined, text: ''}
+      properties: {background: 'rgba(3, 31, 35, 0.12)', role: outlined, text: '', tooltip: Can be left blank if unknown}
       type: TextBox
     layout_properties: {grid_position: 'OJLHOC,CASRUY'}
     name: outlined_card_3_copy
@@ -228,7 +222,7 @@ components:
       type: Label
     - layout_properties: {grid_position: 'YLRUQB,HRQVZH'}
       name: taPrior
-      properties: {background: 'rgba(3, 31, 35, 0.12)'}
+      properties: {background: 'rgba(3, 31, 35, 0.12)', tooltip: 'Please include any relevant experiments e.g., SEM of microcrystals, diffraction studies with any size of crystals, dynamic light scattering etc.,'}
       type: TextArea
     - layout_properties: {grid_position: 'USWKRZ,ATDHNG'}
       name: label_8_copy
@@ -236,7 +230,7 @@ components:
       type: Label
     - layout_properties: {grid_position: 'PUILNJ,ZSOPAO'}
       name: taAim
-      properties: {background: 'rgba(3, 31, 35, 0.12)'}
+      properties: {background: 'rgba(3, 31, 35, 0.12)', tooltip: Please tell us how we can help or what you'd like to get from beamtime with us}
       type: TextArea
     - layout_properties: {grid_position: 'ZOJCUO,VPVCLT'}
       name: chkPriorStruct
@@ -246,7 +240,7 @@ components:
         spacing:
           padding: [null, 0, null, 23]
         text: Is there a prior structure?
-        tooltip: Cryoprotectants are not required generally on VMXm, however please indicate if you have any, or other viscous buffer components
+        tooltip: You do not have to provide a structure but please indicate if this would be a novel structure
       type: CheckBox
     - layout_properties: {grid_position: 'WDGREU,OTWRYR'}
       name: chkMR
@@ -256,7 +250,7 @@ components:
         spacing:
           padding: [null, 0, null, 23]
         text: Is there a molecular replacement model?
-        tooltip: Cryoprotectants are not required generally on VMXm, however please indicate if you have any, or other viscous buffer components
+        tooltip: is there a suitable computational model you can use for an MR solution, or do you require experimental phasing?
       type: CheckBox
     layout_properties: {grid_position: 'BPQWLC,TYCUTG'}
     name: outlined_card_3_copy_copy
@@ -278,11 +272,11 @@ components:
   - event_bindings: {change: flPDB_change}
     layout_properties: {grid_position: 'HWGPKZ,EWCIXV'}
     name: flPDB
-    properties: {file_types: '.cif, .pdb', multiple: true, text: PDB}
+    properties: {file_types: '.cif, .pdb', multiple: true, text: PDB, tooltip: Upload a single pdb/ mmcif file to send as an attachment}
     type: FileLoader
   - layout_properties: {grid_position: 'HWGPKZ,RFFFDI'}
     name: txtPDB
-    properties: {background: 'rgba(3, 31, 35, 0.12)'}
+    properties: {background: 'rgba(3, 31, 35, 0.12)', tooltip: insert a PDB code which we can use as a reference}
     type: TextBox
   - layout_properties: {grid_position: 'FVJSHE,ADIIXZ'}
     name: label_8_copy_copy
@@ -291,7 +285,7 @@ components:
   - event_bindings: {change: file_loader_2_change}
     layout_properties: {grid_position: 'FVJSHE,ITOYPL'}
     name: flImages
-    properties: {file_types: image/*, multiple: true, text: Upload Images}
+    properties: {file_types: image/*, multiple: true, text: Upload Images, tooltip: 'Please include a scale bar so we can gauge your crystal sizes! Any image format is accepted and multiple images are allowed. '}
     type: FileLoader
   - layout_properties: {grid_position: 'FVJSHE,KSSBDA'}
     name: spacer_1
@@ -304,9 +298,10 @@ components:
 - event_bindings: {click: btnSubmit_click}
   layout_properties: {slot: default}
   name: btnSubmit
-  properties: {background: '', role: outlined-button, text: Submit}
+  properties: {background: '', role: outlined-button, text: Submit, tooltip: This will send the VMXm team and yourself an email summarising your information here}
   type: Button
 container:
-  properties: {html: '@theme:standard-page.html'}
+  properties: {html: '@theme:standard-page.html', visible: true}
   type: HtmlTemplate
+custom_component: false
 is_package: true

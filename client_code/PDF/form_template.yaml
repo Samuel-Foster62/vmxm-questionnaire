@@ -99,6 +99,10 @@ components:
     name: outlined_card_3
     properties: {col_widths: '{"KFTZDM":20}', role: outlined-card}
     type: ColumnPanel
+  - layout_properties: {grid_position: 'ADWZPR,DWHIQM'}
+    name: page_break_1
+    properties: {}
+    type: form:PageBreak
   - components:
     - layout_properties: {grid_position: 'TIZHSP,AOHZKA'}
       name: label_3_copy
@@ -106,11 +110,18 @@ components:
       type: Label
     - layout_properties: {grid_position: 'CXQVPF,DJBSCS'}
       name: label_4_copy
-      properties: {text: Crystallisation Conditions}
+      properties:
+        spacing:
+          padding: [null, null, 8, null]
+        text: Crystallisation Conditions
       type: Label
     - layout_properties: {grid_position: 'LLYDDM,QBEPET'}
       name: txtCrystCond
-      properties: {background: 'rgba(3, 31, 35, 0.12)', height: 58}
+      properties:
+        background: rgba(3, 31, 35, 0.12)
+        height: 58
+        margin: [8, null, 8, null]
+        spacing_above: small
       type: TextArea
     - layout_properties: {grid_position: 'NAHHHS,MLBYIY'}
       name: label_8
@@ -168,11 +179,21 @@ components:
       type: Label
     - layout_properties: {grid_position: 'TKUCPJ,VACLHF'}
       name: txtSizing
-      properties: {background: 'rgba(3, 31, 35, 0.12)', role: outlined}
+      properties:
+        background: rgba(3, 31, 35, 0.12)
+        margin: [8, null, null, null]
+        role: outlined
       type: TextBox
+    - layout_properties: {grid_position: 'YOKJYK,SJLQPL'}
+      name: page_break_2
+      properties: {}
+      type: form:PageBreak
     - layout_properties: {grid_position: 'WECJHR,JCOPXA'}
       name: label_5_copy_6_copy
-      properties: {text: Space Group}
+      properties:
+        spacing:
+          margin: [8, null, 8, null]
+        text: Space Group
       type: Label
     - layout_properties: {grid_position: 'GNFCDX,WCDVOV'}
       name: txtSpaceGroup
@@ -229,6 +250,14 @@ components:
         text: Is there a prior structure?
         tooltip: Cryoprotectants are not required generally on VMXm, however please indicate if you have any, or other viscous buffer components
       type: CheckBox
+    - layout_properties: {grid_position: 'ZPSREH,RKYTJP'}
+      name: label_2
+      properties:
+        spacing:
+          margin: [null, 0, null, null]
+          padding: [null, 0, null, null]
+        text: 'PDB code Provided:'
+      type: Label
     - layout_properties: {grid_position: 'ZPSREH,JDSAEM'}
       name: txtPDB
       properties: {}
@@ -243,10 +272,22 @@ components:
         text: Is there a molecular replacement model?
         tooltip: Cryoprotectants are not required generally on VMXm, however please indicate if you have any, or other viscous buffer components
       type: CheckBox
+    - layout_properties: {grid_position: 'WDGREU,MNNIFA'}
+      name: label_7
+      properties: {text: 'PDB file provided:'}
+      type: Label
+    - layout_properties: {grid_position: 'WDGREU,EUEKMS'}
+      name: txtPDBFile
+      properties: {}
+      type: TextBox
     layout_properties: {grid_position: 'BPQWLC,TYCUTG'}
     name: outlined_card_3_copy_copy
-    properties: {col_widths: '{}', role: outlined-card}
+    properties: {col_widths: '{"EQJDXP":30,"RKYTJP":10,"JDSAEM":20,"OTWRYR":30,"MNNIFA":10,"EUEKMS":20}', role: outlined-card}
     type: ColumnPanel
+  - layout_properties: {grid_position: 'LTGHBR,WBNICB'}
+    name: page_break_4
+    properties: {}
+    type: form:PageBreak
   - layout_properties: {grid_position: 'VKHCSV,FAFJGF'}
     name: repeating_panel_1
     properties: {item_template: PDF.ItemTemplate1}
