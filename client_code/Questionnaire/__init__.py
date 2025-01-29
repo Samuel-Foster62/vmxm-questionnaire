@@ -17,17 +17,6 @@ class Questionnaire(QuestionnaireTemplate):
     self.images = []
     # Any code you write here will run before the form opens.
 
-  ##below not needed in final implementation but uswd for debugging
-  def radERAYes_clicked(self, **event_args):
-    """This method is called when this radio button is selected"""
-    print(self.radERAYes.get_group_value())
-    pass
-
-  def radERANo_clicked(self, **event_args):
-    """This method is called when this radio button is selected"""
-    print(self.radERANo.get_group_value())    
-    pass
-
   def chkCryo_change(self, **event_args):
     """This method is called when this checkbox is checked or unchecked"""
     self.txtCryoBuff.enabled = self.chkCryo.checked
