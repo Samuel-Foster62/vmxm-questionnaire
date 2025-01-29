@@ -1,5 +1,5 @@
 import anvil.server
-import anvil.pdf
+from anvil.pdf import PDFRenderer
 import gemmi
 import re
 
