@@ -153,7 +153,7 @@ components:
     - layout_properties: {grid_position: 'YCTDMQ,KEJOPV'}
       name: dropMorphology
       properties:
-        items: [Cube, Rod, Plate, Needle, 'Pyramidal ', Bi-pyramidal, Sphere, Other]
+        items: [Other, Cube, Rod, Plate, Needle, 'Pyramidal ', Bi-pyramidal, Sphere]
         tooltip: Select the closest morphology to your crystals, if you select other, please specify
       type: DropDown
     - layout_properties: {grid_position: 'YNBZPD,AVXPCH'}
