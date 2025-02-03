@@ -46,7 +46,6 @@ class Questionnaire(QuestionnaireTemplate):
     anvil.server.call('cleanUp')
     Essential = [self.txtName, self.txtEmail, self.txtProtName]
 
-    print(f"Essential list: {Essential}")
     res = False
     for ele in Essential:
       if not ele.text:
@@ -59,10 +58,6 @@ class Questionnaire(QuestionnaireTemplate):
      if self.selected_file:
         anvil.server.call('uploadPDB', self.selected_file)
      anvil.server.call("recieveData", **self.data)
-     #pdf = anvil.server.call('create_pdf', **self.data)
-     #anvil.media.download(pdf)
-      ##now want to add images to a container below pdf
-      ##and parse pdb/ cif file ready for emailing
      alert("Sent responses to VMXm team! Please check your emails for a copy")
      self.__init__()
     pass

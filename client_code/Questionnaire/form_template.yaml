@@ -47,7 +47,7 @@ components:
         spacing_below: none
         text: '*Email'
       type: Label
-    - event_bindings: {lost_focus: txtEmail_lost_focus, pressed_enter: txtEmail_pressed_enter}
+    - event_bindings: {lost_focus: txtEmail_lost_focus}
       layout_properties: {grid_position: 'NNZJJH,PSTXQS'}
       name: txtEmail
       properties: {background: 'rgba(3, 31, 35, 0.12)', foreground: wht, role: outlined, tooltip: 'eg., name@institution.domain', type: email}
