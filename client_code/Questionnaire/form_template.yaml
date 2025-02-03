@@ -270,7 +270,7 @@ components:
     properties: {text: 'Please upload a PDB/ mmCIF file if available, alternatively provide a PDB code'}
     type: Label
   - event_bindings: {change: flPDB_change}
-    layout_properties: {grid_position: 'HWGPKZ,EWCIXV'}
+    layout_properties: {grid_position: 'HWGPKZ,RNQDTT PPYCXF,YUIBEX'}
     name: flPDB
     properties:
       file_types: .cif, .pdb
@@ -280,7 +280,7 @@ components:
       text: PDB
       tooltip: Upload a single pdb/ mmcif file to send as an attachment
     type: FileLoader
-  - layout_properties: {grid_position: 'HWGPKZ,RFFFDI'}
+  - layout_properties: {grid_position: 'HWGPKZ,RNQDTT PPYCXF,XCECGH'}
     name: txtPDB
     properties: {background: 'rgba(3, 31, 35, 0.12)', placeholder: pdb code, tooltip: insert a PDB code which we can use as a reference}
     type: TextBox
@@ -289,7 +289,7 @@ components:
     properties: {text: 'Please upload images of your crystals, with a scale bar if available'}
     type: Label
   - event_bindings: {change: file_loader_2_change}
-    layout_properties: {grid_position: 'FVJSHE,ITOYPL'}
+    layout_properties: {grid_position: 'OPYYZU,ZAOUKW'}
     name: flImages
     properties:
       file_types: image/*
@@ -299,13 +299,13 @@ components:
       text: Upload Images
       tooltip: 'Please include a scale bar so we can gauge your crystal sizes! Any image format is accepted and multiple images are allowed. '
     type: FileLoader
-  - layout_properties: {grid_position: 'FVJSHE,KSSBDA'}
+  - layout_properties: {grid_position: 'OPYYZU,EBQKMZ'}
     name: spacer_1
     properties: {height: 32}
     type: Spacer
   layout_properties: {slot: default}
   name: outlined_card_3_copy_copy_copy
-  properties: {col_widths: '{"RNQDTT":20,"ADIIXZ":20,"EWCIXV":10,"RFFFDI":30,"ITOYPL":10,"KSSBDA":30}', role: outlined-card}
+  properties: {col_widths: '{"RNQDTT":20,"ADIIXZ":20}', role: outlined-card}
   type: ColumnPanel
 - event_bindings: {click: btnSubmit_click}
   layout_properties: {slot: default}
