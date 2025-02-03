@@ -272,11 +272,17 @@ components:
   - event_bindings: {change: flPDB_change}
     layout_properties: {grid_position: 'HWGPKZ,EWCIXV'}
     name: flPDB
-    properties: {file_types: '.cif, .pdb', multiple: true, text: PDB, tooltip: Upload a single pdb/ mmcif file to send as an attachment}
+    properties:
+      file_types: .cif, .pdb
+      multiple: true
+      spacing:
+        padding: [8, 0, 8, 0]
+      text: PDB
+      tooltip: Upload a single pdb/ mmcif file to send as an attachment
     type: FileLoader
   - layout_properties: {grid_position: 'HWGPKZ,RFFFDI'}
     name: txtPDB
-    properties: {background: 'rgba(3, 31, 35, 0.12)', tooltip: insert a PDB code which we can use as a reference}
+    properties: {background: 'rgba(3, 31, 35, 0.12)', placeholder: pdb code, tooltip: insert a PDB code which we can use as a reference}
     type: TextBox
   - layout_properties: {grid_position: 'FVJSHE,ADIIXZ'}
     name: label_8_copy_copy
@@ -285,7 +291,13 @@ components:
   - event_bindings: {change: file_loader_2_change}
     layout_properties: {grid_position: 'FVJSHE,ITOYPL'}
     name: flImages
-    properties: {file_types: image/*, multiple: true, text: Upload Images, tooltip: 'Please include a scale bar so we can gauge your crystal sizes! Any image format is accepted and multiple images are allowed. '}
+    properties:
+      file_types: image/*
+      multiple: true
+      spacing:
+        padding: [8, 0, 8, 0]
+      text: Upload Images
+      tooltip: 'Please include a scale bar so we can gauge your crystal sizes! Any image format is accepted and multiple images are allowed. '
     type: FileLoader
   - layout_properties: {grid_position: 'FVJSHE,KSSBDA'}
     name: spacer_1
@@ -293,7 +305,7 @@ components:
     type: Spacer
   layout_properties: {slot: default}
   name: outlined_card_3_copy_copy_copy
-  properties: {col_widths: '{"RNQDTT":20,"ADIIXZ":20,"EWCIXV":20,"RFFFDI":20,"ITOYPL":20,"KSSBDA":20}', role: outlined-card}
+  properties: {col_widths: '{"RNQDTT":20,"ADIIXZ":20,"EWCIXV":10,"RFFFDI":30,"ITOYPL":10,"KSSBDA":30}', role: outlined-card}
   type: ColumnPanel
 - event_bindings: {click: btnSubmit_click}
   layout_properties: {slot: default}

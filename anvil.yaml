@@ -1,4 +1,4 @@
-allow_embedding: false
+allow_embedding: true
 dependencies: []
 metadata: {description: 'Questionnaire regarding user crystal samples prior to visiting VMXm at Diamond Light Source, UK', logo_img: 'asset:VMXm_Endstation_square.jpg', title: VMXm_Questionnaire}
 name: VMXm Questionnaire
